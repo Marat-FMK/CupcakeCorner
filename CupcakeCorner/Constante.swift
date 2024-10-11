@@ -8,10 +8,10 @@
 import Foundation
 
 enum Constants {
-    enum UD: String {
-        case name = "name"
-        case streetAdress = "streetAdress"
-        case city = "city"
-        case zip = "zip"
+    enum UD {
+        static let name = "name"
+        static let streetAdress = "streetAdress"
+        static let city = "city"
+        static let zip = "zip"
     }
 }
