@@ -59,7 +59,7 @@ struct CheckOutView: View {
             return
         }
         
-        let url = URL(string: "http://reqres.in/api/rew")!
+        let url = URL( string: "http://reqres.in/api/rew" )!
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
