@@ -38,14 +38,29 @@ class Order: Codable {
     var extraFrosting = false
     var addSprinkles = false
     
-    var name = UserDefaults.standard.string(forKey: "name") ?? "" {
+    var name = UserDefaults.standard.string(forKey: "name") ?? "" { // без констано и енамов
         didSet {
             UserDefaults.standard.set(name, forKey: "name")
         }
     }
-    var streetAdress = ""
-    var city = ""
-    var zip = ""
+    
+    var streetAdress = UserDefaults.standard.string(forKey: Constants.UD.streetAdress) ?? "" { // с применением констанм без ошибок
+        didSet {
+            UserDefaults.standard.set(streetAdress, forKey: Constants.UD.streetAdress)
+        }
+    }
+    
+    var city = UserDefaults.standard.string(forKey: Constants.UD.city) ?? "" {
+        didSet{
+            UserDefaults.standard.set(city, forKey: Constants.UD.city)
+        }
+    }
+    
+    var zip = UserDefaults.standard.string(forKey: Constants.UD.zip) ?? "" {
+        didSet {
+            UserDefaults.standard.set(zip, forKey: Constants.UD.zip)
+        }
+    }
     
     var hasValidAdress: Bool {
         if name.isEmpty||streetAdress.isEmpty||city.isEmpty||zip.isEmpty {
