@@ -38,7 +38,11 @@ class Order: Codable {
     var extraFrosting = false
     var addSprinkles = false
     
-    var name = ""
+    var name = UserDefaults.standard.string(forKey: "name") ?? "" {
+        didSet {
+            UserDefaults.standard.set(name, forKey: "name")
+        }
+    }
     var streetAdress = ""
     var city = ""
     var zip = ""
