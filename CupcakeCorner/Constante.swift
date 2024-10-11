@@ -7,4 +7,11 @@
 
 import Foundation
 
-
+enum Constants {
+    enum UD: String {
+        case name = "name"
+        case streetAdress = "streetAdress"
+        case city = "city"
+        case zip = "zip"
+    }
+}
