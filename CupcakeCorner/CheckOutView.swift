@@ -19,7 +19,7 @@ struct CheckOutView: View {
     var body: some View {
         ScrollView {
             VStack {
-                AsyncImage(url: URL(string: "https://applelives.com/wp-content/uploads/2016/03/iPhone-SE-11.jpeg"), scale: 3) { image in
+                AsyncImage(url: URL(string: "https://applelives.com/wp-content/uploads/2016/03/iPhone-SE-11.jpeg"),  scale: 3) { image in
                     image
                         .resizable()
                         .scaledToFit()
