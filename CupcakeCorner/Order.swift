@@ -22,7 +22,7 @@ class Order: Codable {
         case _zip = "zip"
     }
     
-    static let types = ["Vanilla", "Strawberry", "Chokolate", "Rainbow"]
+    static let types = ["Vanilla", "Strawberry", "Chokolate", "Rafaello"]
     
     var type = 0
     var quantity = 3
